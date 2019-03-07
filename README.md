@@ -17,3 +17,15 @@ Third, we reduced the complexity of the clinical significance field by regroupin
 
 Output: clinvar.[month.of.release].pf that serves as an input for the shiny app code of Shiny ClinVar web server hosted at http://scv.broadinstitute.org/
 
+# Shiny ClinVar Source code
+
+User interface: ui.R
+Server code: server.R
+
+Input1: clinvar.[month.of.release].pf
+Input2: genes.refSeq
+Input3: gene-ccds-seq-length-uniprot.txt
+
+Usage: 
+Step 1: place on the same folder Input1, Input2, Input3, ui.R and server.R 
+Step 2: on R studio run server.R or ui 
