@@ -4,6 +4,7 @@ Shiny ClinVar web server pre-filtering stage and R source code of http://scv.bro
 # Prefiltering stage
 
 Input: download variant_summary.txt from ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz and decompress
+
 Run: $perl clinvar.pre-filtering.pl variant_summary.txt
 
 The program performs the following taks:
