@@ -26,6 +26,8 @@ Input1: clinvar.[month.of.release].pf
 Input2: genes.refSeq
 Input3: gene-ccds-seq-length-uniprot.txt
 
-Usage: 
-Step 1: place on the same folder Input1, Input2, Input3, ui.R and server.R 
+Usage:
+
+Step 1: place on the same folder Input1, Input2, Input3, ui.R and server.R
+
 Step 2: on R studio run server.R or ui 
