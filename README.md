@@ -7,9 +7,10 @@ Here, we present Shiny ClinVar (http://scv.broadinstitute.org/) a web-server app
 Shiny ClinVar web server pre-filtering stage and R source code of http://scv.broadinstitute.org/
 
 # 1) Prefiltering stage
+```
 Input: download variant_summary.txt from ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz and decompress
 Run: $perl clinvar.pre-filtering.pl variant_summary.txt
-
+```
 The program performs the following taks:
 
 First, we keep only entries from the human reference genome version GRCh37.p13/hg19 and referring to canonical transcripts. 
@@ -21,16 +22,16 @@ Third, we reduced the complexity of the clinical significance field by regroupin
 Output: clinvar.[month.of.release].pf that serves as an input for the shiny app code of Shiny ClinVar web server hosted at http://scv.broadinstitute.org/
 
 # 2) Shiny ClinVar Source code
-
+```
 User interface: ui.R
 Server code: server.R
 
 Input1: clinvar.[month.of.release].pf
 Input2: genes.refSeq
 Input3: gene-ccds-seq-length-uniprot.txt
-
+```
 Usage:
-
+```
 Step 1: place on the same folder Input1, Input2, Input3, ui.R and server.R
-
 Step 2: on R studio run server.R or ui 
+```
