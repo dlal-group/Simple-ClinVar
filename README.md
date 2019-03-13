@@ -1,8 +1,12 @@
-# SCV
+# About Shiny ClinVar (SCV) 
+Clinical genetic testing has exponentially expanded in recent years, leading to an overwhelming amount of patient variants with high variability in pathogenicity and heterogeneous phenotypes. A large part of the variant level data is comprehensively aggregated in public databases such as ClinVar and are publicly accessible.  However, the ability to explore this rich resource and answer general questions such as “How many missense variants are associated to a specific disease or gene?” or “In which part of the protein are patient variants located?” is limited and requires advanced bioinformatics processing. 
+
+Here, we present Shiny ClinVar (http://scv.broadinstitute.org/) a web-server application that is able to provide variant, gene, and disease level summary statistics based on the entire ClinVar database in a dynamic and user-friendly web-interface.  Overall, our web application is able to interactively answer basic questions regarding genetic variation and their known relationships to disease. Our website will follow ClinVar monthly releases and provide easy access to the rich ClinVar resource to a broader audience including basic and clinical scientists.
+
+# Shiny ClinVar (SCV) GitHub contents
 Shiny ClinVar web server pre-filtering stage and R source code of http://scv.broadinstitute.org/
 
-# Prefiltering stage
-
+# 1) Prefiltering stage
 Input: download variant_summary.txt from ftp://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz and decompress
 Run: $perl clinvar.pre-filtering.pl variant_summary.txt
 
@@ -16,7 +20,7 @@ Third, we reduced the complexity of the clinical significance field by regroupin
 
 Output: clinvar.[month.of.release].pf that serves as an input for the shiny app code of Shiny ClinVar web server hosted at http://scv.broadinstitute.org/
 
-# Shiny ClinVar Source code
+# 2) Shiny ClinVar Source code
 
 User interface: ui.R
 Server code: server.R
