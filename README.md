@@ -1,10 +1,10 @@
 # Synopsis 
 Clinical genetic testing has exponentially expanded in recent years, leading to an overwhelming amount of patient variants with high variability in pathogenicity and heterogeneous phenotypes. A large part of the variant level data is comprehensively aggregated in public databases such as ClinVar and are publicly accessible.  However, the ability to explore this rich resource and answer general questions such as “How many missense variants are associated to a specific disease or gene?” or “In which part of the protein are patient variants located?” is limited and requires advanced bioinformatics processing. 
 
-Here, we present Shiny ClinVar (http://scv.broadinstitute.org/) a web-server application that is able to provide variant, gene, and disease level summary statistics based on the entire ClinVar database in a dynamic and user-friendly web-interface.  Overall, our web application is able to interactively answer basic questions regarding genetic variation and their known relationships to disease. Our website will follow ClinVar monthly releases and provide easy access to the rich ClinVar resource to a broader audience including basic and clinical scientists.
+Here, we present Simple ClinVar (http://simple-clinvar.broadinstitute.org/) a web-server application that is able to provide variant, gene, and disease level summary statistics based on the entire ClinVar database in a dynamic and user-friendly web-interface.  Overall, our web application is able to interactively answer basic questions regarding genetic variation and their known relationships to disease. Our website will follow ClinVar monthly releases and provide easy access to the rich ClinVar resource to a broader audience including basic and clinical scientists.
 
-# Shiny ClinVar (SCV) GitHub contents
-Shiny ClinVar web server pre-filtering stage and R source code of http://scv.broadinstitute.org/
+# Simple ClinVar GitHub contents
+Simple ClinVar web server pre-filtering stage and R source code of http://simple-clinvar.broadinstitute.org/
 
 # 1) Prefiltering stage
 ```
@@ -19,9 +19,9 @@ The program performs the following taks:
 
 * Third, we reduced the complexity of the clinical significance field by regrouping and merging them in to five unique and non-redundant categories: “Pathogenic”, “Likely pathogenic”, “Risk factor and Association”, “Protective/Likely benign” and “Benign”. Conflicting interpretations of pathogenicity, variants of unknown significance (VUS) and contradictory evidence (e.g. “Likely benign” alongside “Risk” evidences) were combined together in to an “Uncertain/Conflicting” category. Similarly, variants annotated with multiple evidence categories of the same evidence direction such as “Pathogenic” alongside “Likely pathogenic” were combined and the respective lower evidence category assigned. Fourth, ClinVar entries with phenotypes annotated as “not provided” and “not specified” were combined in to one single category called “Not provided / Not specified”.
 
-* Output: clinvar.[month.of.release].pf that serves as an input for the shiny app code of Shiny ClinVar web server hosted at http://scv.broadinstitute.org/
+* Output: clinvar.[month.of.release].pf that serves as an input for the Simple ClinVar web server hosted at http://simple-clinvar.broadinstitute.org/
 
-# 2) Shiny ClinVar Source code
+# 2) Simple ClinVar Source code
 ```
 User interface: ui.R
 Server code: server.R
