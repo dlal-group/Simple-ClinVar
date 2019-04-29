@@ -19,6 +19,8 @@ The program performs the following taks:
 
 * Third, we reduced the complexity of the clinical significance field by regrouping and merging them in to five unique and non-redundant categories: “Pathogenic”, “Likely pathogenic”, “Risk factor and Association”, “Protective/Likely benign” and “Benign”. Conflicting interpretations of pathogenicity, variants of unknown significance (VUS) and contradictory evidence (e.g. “Likely benign” alongside “Risk” evidences) were combined together in to an “Uncertain/Conflicting” category. Similarly, variants annotated with multiple evidence categories of the same evidence direction such as “Pathogenic” alongside “Likely pathogenic” were combined and the respective lower evidence category assigned. Fourth, ClinVar entries with phenotypes annotated as “not provided” and “not specified” were combined in to one single category called “Not provided / Not specified”.
 
+* Fourth, ClinVar entries with missing annotations such as the absence of anHGVS variant name or incomplete genomic coordinates are filtered out. By the time of submission 493,240 out of 503,065 (98.04%) ClinVar entries (April 22 release) are included in Simple ClinVar.
+
 * Output: clinvar.[month.of.release].pf that serves as an input for the Simple ClinVar web server hosted at http://simple-clinvar.broadinstitute.org/
 
 # 2) Simple ClinVar Source code
